@@ -1,0 +1,77 @@
+env:
+  TERM: xterm-256color
+
+# More colorscheme
+# https://github.com/alacritty/alacritty/wiki/Color-schemes
+# https://github.com/alacritty/alacritty-theme/tree/master/themes
+# after_glow, ayu_dark, ayu_mirage, catppuccin_frappe, catppuccin_macchito, catppuccin_mocha, cobalt2, cyberpunk_neon, dracula, dragon_red, gruvbox, hyper, iceberg, material_theme, monokai_pro, new_moon, night_owl, nord, oceanic_next, one_dark, palenight, papercolor_dark, pop_os, snazzy, solarized_dark, substrata, tokyo_night_storm, tokyo_night, tomorrow_night
+import:
+  - ~/.config/alacritty/themes/palenight.yml 
+
+window:
+  dimensions:
+    columns: 150
+    lines: 35
+  padding:
+    x: 0
+    y: 0
+  decorations: none # full, none
+  opacity: 1.0
+  startup_mode: Maximized # Windowed, Maximized, Fullscreen
+  title: Alacritty
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    # family: Cartograph CF
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  bold:
+    # family: Cartograph CF
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    # family: Cartograph CF
+    family: JetBrainsMono Nerd Font
+    style: Italic
+  bold_italic:
+    # family: Cartograph CF
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 12.0
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+
+draw_bold_text_with_bright_colors: false
+
+shell:
+  program: /bin/zsh
+  args: []
+
+cursor:
+  style:
+    shape: Block # Block, Underline, Beam
+    blinking: Always # Always, On, Off, Never
+  blink_interval: 750
+  unfocused_hollow: true
+  thickness: 0.15
+
+hints:
+  url:
+    launcher:
+      program: firefox
+      args: []
+    modifiers: None
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection  }
+
+key_bindings:
+  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
